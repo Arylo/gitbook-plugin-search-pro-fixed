@@ -1,10 +1,14 @@
-## gitbook-plugin-search-pro
+## gitbook-plugin-search-pro-fixed
 
 Gitbook search engine pro. (支持中文搜索)
 
 You can search any characters(utf-8) and highlight it in your GitBook, not only english(exp:Chinese).
 
 > Note: Only gitbook >= 3.0.0 support
+
+### New Modify
+
+- upload search json later
 
 ### Demo preview
 
@@ -16,38 +20,38 @@ http://gitbook-plugins.github.io/gitbook-plugin-search-pro/book/
 
 ---
 
-![](https://github.com/gitbook-plugins/gitbook-plugin-search-pro/blob/master/previews/search1.gif)
+![](https://github.com/arylo/gitbook-plugin-search-pro-fixed/blob/master/previews/search1.gif)
 
 ---
 
-![](https://github.com/gitbook-plugins/gitbook-plugin-search-pro/blob/master/previews/search2.gif)
+![](https://github.com/arylo/gitbook-plugin-search-pro-fixed/blob/master/previews/search2.gif)
 
 ---
 
-![](https://github.com/gitbook-plugins/gitbook-plugin-search-pro/blob/master/previews/search3.gif)
+![](https://github.com/arylo/gitbook-plugin-search-pro-fixed/blob/master/previews/search3.gif)
 
 ---
 
 ### Usage
 
-Before use this plugin, you should disable the default search plugin first, 
+Before use this plugin, you should disable the default search plugin first,
 Here is a `book.js` configuration example:
 
 ```js
 {
     "plugins": [
-      "-lunr", "-search", "search-pro"
+      "-lunr", "-search", "search-pro-fixed"
     ]
 }
 ```
 
 ### Example
-    
+
 After installed gitbook.
-    
+
 ```
-    > git clone git@github.com:gitbook-plugins/gitbook-plugin-search-pro.git -b gh-pages
-    > cd ./gitbook-plugin-search-pro
+    > git clone git@github.com:arylo/gitbook-plugin-search-pro-fixed.git -b gh-pages
+    > cd ./gitbook-plugin-search-pro-fixed
     > npm install
     > gitbook serve ./
 ```

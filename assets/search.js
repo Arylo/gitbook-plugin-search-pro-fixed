@@ -154,6 +154,15 @@ require([
             handleUpdate();
         });
 
+        $body.on('click', '#book-search-input input', function(e) {
+            if (Object.keys(INDEX_DATA).length === 0) {
+                var url = state.basePath + "/search_plus_index.json";
+                $.getJSON(url).then(function(data) {
+                    INDEX_DATA = data;
+                });
+            }
+        });
+
         // Push to history on blur
         $body.on('blur', '#book-search-input input', function(e) {
             // Update history state
@@ -168,11 +177,8 @@ require([
 
     gitbook.events.on('start', function() {
         bindSearch();
-        $.getJSON(state.basePath + "/search_plus_index.json").then(function(data) {
-            INDEX_DATA = data;
-            showResult();
-            closeSearch();
-        });
+        showResult();
+        closeSearch();
     });
 
     // 高亮文本
