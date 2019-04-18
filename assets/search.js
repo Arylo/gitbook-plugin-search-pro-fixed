@@ -159,6 +159,7 @@ require([
                 var url = state.basePath + "/search_plus_index.json";
                 $.getJSON(url).then(function(data) {
                     INDEX_DATA = data;
+                    handleUpdate();
                 });
             }
         });
